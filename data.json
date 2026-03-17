@@ -1,0 +1,158 @@
+{
+  "profile": {
+    "name": "Kevin Palacios",
+    "title": "Frontend Engineer en formación",
+    "location": "El Salvador 🇸🇻",
+    "bio": "Estudiante de Ingeniería en Software en UTEC, construyendo mi camino hacia Frontend Engineer. Apasionado por crear interfaces rápidas, accesibles y bien diseñadas. Actualmente cursando un roadmap de 14–18 meses de HTML/CSS → JavaScript → TypeScript → React → Angular.",
+    "email": "tu@email.com",
+    "github": "https://github.com/tu-usuario",
+    "linkedin": "https://linkedin.com/in/tu-usuario",
+    "available": true
+  },
+  "roadmap": {
+    "title": "Frontend Engineer Roadmap",
+    "duration": "14–18 meses",
+    "lastSync": "2026-03-16",
+    "phases": [
+      {
+        "id": 1, "emoji": "🧱", "color": "#4ade80",
+        "title": "HTML Semántico + CSS Moderno + Responsive",
+        "months": "Mes 1–2",
+        "courses": [
+          { "name": "Universidad Desarrollo Web - FrontEnd Web Developer!", "pct": 6 },
+          { "name": "Desarrollo Web Frontend: HTML, CSS, Grid, Flexbox y BEM 2026", "pct": 0 }
+        ]
+      },
+      {
+        "id": 2, "emoji": "⚡", "color": "#facc15",
+        "title": "JavaScript Profundo",
+        "months": "Mes 2–5",
+        "courses": [
+          { "name": "Escuela de JavaScript 2026 - De cero a Master", "pct": 0 },
+          { "name": "Universidad JavaScript - De Cero a Experto!", "pct": 0 },
+          { "name": "Maestría en JavaScript: Desde Principiante Hasta Experto", "pct": 0 },
+          { "name": "10 Proyectos de Javascript para tu portafolio", "pct": 0 }
+        ]
+      },
+      {
+        "id": 3, "emoji": "🔷", "color": "#38bdf8",
+        "title": "TypeScript — Tipado Profesional",
+        "months": "Mes 5–6",
+        "courses": [
+          { "name": "TypeScript para principiantes desde 0", "pct": 0 }
+        ]
+      },
+      {
+        "id": 4, "emoji": "⚛️", "color": "#fb923c",
+        "title": "React 19 — Framework Principal",
+        "months": "Mes 6–9",
+        "courses": [
+          { "name": "React JS 19: La Guía Selecta del Programador React", "pct": 0 },
+          { "name": "React, Spring y ChatGPT IA: Crea tu primera App Full Stack", "pct": 0 },
+          { "name": "Trabajando con datos en la Web", "pct": 0 }
+        ]
+      },
+      {
+        "id": 5, "emoji": "🔺", "color": "#e879f9",
+        "title": "Angular — Framework Empresarial",
+        "months": "Mes 9–12",
+        "courses": [
+          { "name": "Universidad Angular - De Cero a Experto - Actualizado", "pct": 0 },
+          { "name": "Angular, Spring y ChatGPT IA: Crea tu primera App Full Stack", "pct": 0 }
+        ]
+      },
+      {
+        "id": 6, "emoji": "🚀", "color": "#f43f5e",
+        "title": "Rendimiento, Accesibilidad y Testing",
+        "months": "Mes 12–14",
+        "courses": [
+          { "name": "Todo sobre Testing y Debugging de Software", "pct": 0 },
+          { "name": "Trabajando con datos en la Web", "pct": 0 }
+        ]
+      },
+      {
+        "id": 7, "emoji": "🎯", "color": "#a78bfa",
+        "title": "Portafolio Profesional y Despliegue",
+        "months": "Mes 14–16",
+        "courses": [
+          { "name": "10 Proyectos Completos para tu Portafolio", "pct": 0 },
+          { "name": "React, Flask, Python, MySql y ChatGPT IA - App Full Stack", "pct": 0 }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "TechMaintenance",
+      "description": "App Android para gestión de mantenimiento de equipos técnicos. Autenticación biométrica, roles (admin/técnico), GPS, Firebase y modo offline con Room Database.",
+      "tech": ["Java", "Firebase", "Android", "Room DB"],
+      "status": "completed",
+      "github": "https://github.com/tu-usuario/techMaintenance",
+      "demo": "",
+      "phase": 0
+    },
+    {
+      "id": 2,
+      "title": "CallTrack HelpDesk",
+      "description": "Sistema de tickets de soporte técnico. Arquitectura de 3 capas, roles (Admin/Supervisor/Agente), JWT, MySQL en Railway.",
+      "tech": ["React", "Vite", "MySQL", "JWT", "Railway"],
+      "status": "completed",
+      "github": "https://github.com/tu-usuario/calltrack",
+      "demo": "",
+      "phase": 4
+    },
+    {
+      "id": 3,
+      "title": "Sabor Y Encanto",
+      "description": "Web de restaurante con diseño elegante. Menú interactivo, reservaciones y diseño gold-and-dark.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "status": "completed",
+      "github": "https://github.com/tu-usuario/sabor-y-encanto",
+      "demo": "",
+      "phase": 1
+    },
+    {
+      "id": 4,
+      "title": "Udemy Progress Tracker",
+      "description": "Extensión de Chrome + web tracker que sincroniza automáticamente el progreso de cursos de Udemy usando la API interna del sitio.",
+      "tech": ["Chrome Extension", "JavaScript", "HTML/CSS"],
+      "status": "in-progress",
+      "github": "",
+      "demo": "",
+      "phase": 1
+    },
+    {
+      "id": 5,
+      "title": "Proyecto de cierre — Fase 1",
+      "description": "Landing page mobile-first con Grid + Flexbox, metodología BEM y animaciones CSS. Lighthouse > 90.",
+      "tech": ["HTML", "CSS", "BEM"],
+      "status": "pending",
+      "github": "",
+      "demo": "",
+      "phase": 1
+    },
+    {
+      "id": 6,
+      "title": "App de Clima — Vanilla JS + TS",
+      "description": "Aplicación de clima con JavaScript vanilla + TypeScript. Consume OpenWeatherMap API, historial en localStorage.",
+      "tech": ["JavaScript", "TypeScript", "OpenWeatherMap API"],
+      "status": "pending",
+      "github": "",
+      "demo": "",
+      "phase": 2
+    }
+  ],
+  "skills": [
+    { "name": "HTML / CSS", "level": 40, "color": "#f97316" },
+    { "name": "JavaScript", "level": 15, "color": "#facc15" },
+    { "name": "TypeScript", "level": 5, "color": "#38bdf8" },
+    { "name": "React", "level": 10, "color": "#61dafb" },
+    { "name": "Angular", "level": 5, "color": "#e879f9" },
+    { "name": "Java / Android", "level": 60, "color": "#f43f5e" },
+    { "name": "SQL / SQL Server", "level": 65, "color": "#4ade80" },
+    { "name": "Firebase", "level": 50, "color": "#fb923c" },
+    { "name": "Git / GitHub", "level": 45, "color": "#a78bfa" },
+    { "name": "Linux / RHEL", "level": 40, "color": "#94a3b8" }
+  ]
+}
