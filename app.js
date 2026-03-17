@@ -20,11 +20,11 @@ var DATA = {
       color: "#fb923c",
       duration: "14–18 meses",
       status: "active",
-      lastSync: "2026-03-16",
+      lastSync: "2026-03-17",
       phases: [
         { id:1, emoji:"🧱", color:"#4ade80", title:"HTML + CSS Moderno + Responsive", months:"Mes 1–2",
           courses:[
-            { name:"Universidad Desarrollo Web - FrontEnd Web Developer!", pct:6 },
+            { name:"Universidad Desarrollo Web - FrontEnd Web Developer!", pct:7 },
             { name:"Desarrollo Web Frontend: HTML, CSS, Grid, Flexbox y BEM 2026", pct:0 }
           ]},
         { id:2, emoji:"⚡", color:"#facc15", title:"JavaScript Profundo", months:"Mes 2–5",
@@ -78,7 +78,7 @@ var DATA = {
           ]},
         { id:2, emoji:"🗄️", color:"#4ade80", title:"Bases de Datos — Especialización Profunda", months:"Mes 3–6",
           courses:[
-            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:0 },
+            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:31 },
             { name:"Aprende SQL desde CERO hasta AVANZADO con MySQL", pct:0 },
             { name:"Bases de Datos con MySQL + ChatGPT y MongoDB", pct:0 },
             { name:"Aprende Bases de Datos Distribuidas en 1 hora", pct:0 }
@@ -125,7 +125,7 @@ var DATA = {
             { name:"Escuela de JavaScript 2026 - De cero a Master", pct:0 },
             { name:"Universidad JavaScript - De Cero a Experto!", pct:0 },
             { name:"TypeScript para principiantes desde 0", pct:0 },
-            { name:"Universidad Desarrollo Web - FrontEnd Web Developer!", pct:6 }
+            { name:"Universidad Desarrollo Web - FrontEnd Web Developer!", pct:7 }
           ]},
         { id:2, emoji:"⚛️", color:"#fb923c", title:"Frontend Profesional — React 19", months:"Mes 4–6",
           courses:[
@@ -138,7 +138,7 @@ var DATA = {
           ]},
         { id:4, emoji:"🗄️", color:"#4ade80", title:"Bases de Datos — SQL + NoSQL", months:"Mes 8–9",
           courses:[
-            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:0 },
+            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:31 },
             { name:"Bases de Datos con MySQL + ChatGPT y MongoDB", pct:0 }
           ]},
         { id:5, emoji:"🖥️", color:"#38bdf8", title:"Backend con Node.js — APIs REST", months:"Mes 9–11",
@@ -221,7 +221,7 @@ var DATA = {
       phases: [
         { id:1, emoji:"🗄️", color:"#4ade80", title:"SQL — El Corazón del Análisis de Datos", months:"Mes 1–3",
           courses:[
-            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:0 },
+            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:31 },
             { name:"SQL - Curso completo de Bases de Datos - de 0 a...", pct:0 },
             { name:"Aprende SQL desde CERO hasta AVANZADO con MySQL", pct:0 },
             { name:"Entrenamiento de Base de Datos Microsoft SQL Server", pct:0 }
@@ -234,8 +234,8 @@ var DATA = {
           ]},
         { id:3, emoji:"📊", color:"#38bdf8", title:"Power BI — Visualización Ejecutiva", months:"Mes 5–7",
           courses:[
-            { name:"Curso Power BI: De Principiante a Avanzado", pct:0 },
-            { name:"Power BI - Mi primer proyecto - Fitness Life", pct:0 },
+            { name:"Curso Power BI: De Principiante a Avanzado", pct:1 },
+            { name:"Power BI - Mi primer proyecto - Fitness Life", pct:7 },
             { name:"Especialización en lenguaje DAX para análisis", pct:0 }
           ]},
         { id:4, emoji:"📗", color:"#fb923c", title:"Excel Avanzado para Análisis", months:"Mes 7–8",
