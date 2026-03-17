@@ -3,7 +3,7 @@
 
 var DATA = {
   "profile": {
-    "name": "Kevin Palacios",
+    "name": "Kevin Chávez",
     "title": "Frontend Engineer en formación",
     "location": "El Salvador 🇸🇻",
     "bio": "Estudiante de Ingeniería en Software en UTEC, construyendo mi camino hacia Frontend Engineer. Apasionado por crear interfaces rápidas, accesibles y bien diseñadas. Actualmente cursando un roadmap de 14–18 meses de HTML/CSS → JavaScript → TypeScript → React → Angular.",
