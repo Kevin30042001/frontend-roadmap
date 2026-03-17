@@ -186,9 +186,7 @@ function renderProjects(projects) {
     if (p.demo) {
       linksHTML += '<a href="' + esc(p.demo) + '" target="_blank" class="project-link">Demo →</a>';
     }
-    if (!p.github && !p.demo) {
-      linksHTML = '<span class="project-link" style="opacity:.4;cursor:default">Próximamente</span>';
-    }
+    
 
     html += '<div class="project-card" style="border-top-color:' + color + '">'
       + '<div class="project-top">'
