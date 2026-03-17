@@ -1,488 +1,236 @@
-// app.js — Portfolio Kevin Chávez — 5 Roadmaps
-
-var DATA = {
-  profile: {
-    name: "Kevin Chávez",
-    title: "Software Engineer en formación",
-    location: "El Salvador 🇸🇻",
-    bio: "Estudiante de Ingeniería en Software en UTEC. Siguiendo 5 roadmaps estructurados hacia múltiples especializaciones: Frontend, Backend, Full Stack, Java y Análisis de Datos. Apasionado por construir software de calidad, bien diseñado y mantenible.",
-    email: "tu@email.com",
-    github: "https://github.com/Kevin30042001",
-    linkedin: "",
-    available: true
-  },
-
-  roadmaps: [
-    {
-      id: "frontend",
-      label: "Frontend Engineer",
-      icon: "🎨",
-      color: "#fb923c",
-      duration: "14–18 meses",
-      status: "active",
-      lastSync: "2026-03-16",
-      phases: [
-        { id:1, emoji:"🧱", color:"#4ade80", title:"HTML + CSS Moderno + Responsive", months:"Mes 1–2",
-          courses:[
-            { name:"Universidad Desarrollo Web - FrontEnd Web Developer!", pct:6 },
-            { name:"Desarrollo Web Frontend: HTML, CSS, Grid, Flexbox y BEM 2026", pct:0 }
-          ]},
-        { id:2, emoji:"⚡", color:"#facc15", title:"JavaScript Profundo", months:"Mes 2–5",
-          courses:[
-            { name:"Escuela de JavaScript 2026 - De cero a Master", pct:0 },
-            { name:"Universidad JavaScript - De Cero a Experto!", pct:0 },
-            { name:"Maestría en JavaScript: Desde Principiante Hasta Experto", pct:0 },
-            { name:"10 Proyectos de Javascript para tu portafolio", pct:0 }
-          ]},
-        { id:3, emoji:"🔷", color:"#38bdf8", title:"TypeScript — Tipado Profesional", months:"Mes 5–6",
-          courses:[
-            { name:"TypeScript para principiantes desde 0", pct:0 }
-          ]},
-        { id:4, emoji:"⚛️", color:"#fb923c", title:"React 19 — Framework Principal", months:"Mes 6–9",
-          courses:[
-            { name:"React JS 19: La Guía Selecta del Programador React", pct:0 },
-            { name:"React, Spring y ChatGPT IA: Crea tu primera App Full Stack", pct:0 },
-            { name:"Trabajando con datos en la Web", pct:0 }
-          ]},
-        { id:5, emoji:"🔺", color:"#e879f9", title:"Angular — Framework Empresarial", months:"Mes 9–12",
-          courses:[
-            { name:"Universidad Angular - De Cero a Experto - Actualizado", pct:0 },
-            { name:"Angular, Spring y ChatGPT IA: Crea tu primera App Full Stack", pct:0 }
-          ]},
-        { id:6, emoji:"🚀", color:"#f43f5e", title:"Rendimiento, Accesibilidad y Testing", months:"Mes 12–14",
-          courses:[
-            { name:"Todo sobre Testing y Debugging de Software Desde 0 a Experto", pct:0 },
-            { name:"Trabajando con datos en la Web", pct:0 }
-          ]},
-        { id:7, emoji:"🎯", color:"#a78bfa", title:"Portafolio Profesional y Despliegue", months:"Mes 14–16",
-          courses:[
-            { name:"10 Proyectos Completos para tu Portafolio", pct:0 },
-            { name:"React, Flask, Python, MySql y ChatGPT IA - App Full Stack", pct:0 }
-          ]}
-      ]
-    },
-    {
-      id: "backend",
-      label: "Backend Engineer",
-      icon: "🖥️",
-      color: "#38bdf8",
-      duration: "18+ meses",
-      status: "upcoming",
-      lastSync: null,
-      phases: [
-        { id:1, emoji:"🧱", color:"#facc15", title:"JavaScript + TypeScript — Base del Lenguaje", months:"Mes 1–3",
-          courses:[
-            { name:"Escuela de JavaScript 2026 - De cero a Master", pct:0 },
-            { name:"Universidad JavaScript - De Cero a Experto!", pct:0 },
-            { name:"TypeScript para principiantes desde 0", pct:0 }
-          ]},
-        { id:2, emoji:"🗄️", color:"#4ade80", title:"Bases de Datos — Especialización Profunda", months:"Mes 3–6",
-          courses:[
-            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:0 },
-            { name:"Aprende SQL desde CERO hasta AVANZADO con MySQL", pct:0 },
-            { name:"Bases de Datos con MySQL + ChatGPT y MongoDB", pct:0 },
-            { name:"Aprende Bases de Datos Distribuidas en 1 hora", pct:0 }
-          ]},
-        { id:3, emoji:"🖥️", color:"#38bdf8", title:"Backend con Node.js — APIs REST Profesionales", months:"Mes 6–8",
-          courses:[
-            { name:"JavaScript: Desde cero con NodeJS", pct:0 },
-            { name:"Desarrollo de API RESTful con Node.js, Koa", pct:0 }
-          ]},
-        { id:4, emoji:"🐘", color:"#a78bfa", title:"PHP + Laravel — Patrones Arquitectónicos", months:"Mes 8–11",
-          courses:[
-            { name:"Programación Web desde 0 con PHP 8, MySQL, Laravel y Symfony", pct:0 },
-            { name:"Arquitectura Web Profesional: PHP y MySQL", pct:0 },
-            { name:"Master en PHP Desde 0 hasta Desarrollar Proyectos", pct:0 }
-          ]},
-        { id:5, emoji:"☕", color:"#f43f5e", title:"Java + Spring Boot — Backend Empresarial", months:"Mes 11–14",
-          courses:[
-            { name:"Universidad Java - Cero a Experto - Actualizado", pct:0 },
-            { name:"Spring 6 and Spring Boot 3: Developing Java Web Applications", pct:0 }
-          ]},
-        { id:6, emoji:"🐍", color:"#fb923c", title:"Python + FastAPI / Django", months:"Mes 14–16",
-          courses:[
-            { name:"Universidad Python - Cero a Experto - Actualizado", pct:0 },
-            { name:"Desarrolla de forma rápida APIs con FastAPI", pct:0 },
-            { name:"Django y ChatGPT - Crea tu primera App Web", pct:0 }
-          ]},
-        { id:7, emoji:"🏗️", color:"#e879f9", title:"Arquitectura de Sistemas + Seguridad", months:"Mes 16–18",
-          courses:[
-            { name:"Todo sobre Testing y Debugging de Software Desde 0 a Experto", pct:0 }
-          ]}
-      ]
-    },
-    {
-      id: "fullstack",
-      label: "Full Stack Developer",
-      icon: "⚡",
-      color: "#4ade80",
-      duration: "18–20 meses",
-      status: "upcoming",
-      lastSync: null,
-      phases: [
-        { id:1, emoji:"🧱", color:"#facc15", title:"Fundamentos — JavaScript + TypeScript + HTML/CSS", months:"Mes 1–4",
-          courses:[
-            { name:"Escuela de JavaScript 2026 - De cero a Master", pct:0 },
-            { name:"Universidad JavaScript - De Cero a Experto!", pct:0 },
-            { name:"TypeScript para principiantes desde 0", pct:0 },
-            { name:"Universidad Desarrollo Web - FrontEnd Web Developer!", pct:6 }
-          ]},
-        { id:2, emoji:"⚛️", color:"#fb923c", title:"Frontend Profesional — React 19", months:"Mes 4–6",
-          courses:[
-            { name:"React JS 19: La Guía Selecta del Programador React", pct:0 },
-            { name:"Trabajando con datos en la Web", pct:0 }
-          ]},
-        { id:3, emoji:"🔺", color:"#e879f9", title:"Frontend Empresarial — Angular", months:"Mes 6–8",
-          courses:[
-            { name:"Universidad Angular - De Cero a Experto - Actualizado", pct:0 }
-          ]},
-        { id:4, emoji:"🗄️", color:"#4ade80", title:"Bases de Datos — SQL + NoSQL", months:"Mes 8–9",
-          courses:[
-            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:0 },
-            { name:"Bases de Datos con MySQL + ChatGPT y MongoDB", pct:0 }
-          ]},
-        { id:5, emoji:"🖥️", color:"#38bdf8", title:"Backend con Node.js — APIs REST", months:"Mes 9–11",
-          courses:[
-            { name:"JavaScript: Desde cero con NodeJS", pct:0 },
-            { name:"Desarrollo de API RESTful con Node.js, Koa", pct:0 }
-          ]},
-        { id:6, emoji:"🐘", color:"#a78bfa", title:"Backend con PHP + Laravel", months:"Mes 11–14",
-          courses:[
-            { name:"Programación Web desde 0 con PHP 8, MySQL, Laravel y Symfony", pct:0 },
-            { name:"Master en PHP Desde 0 hasta Desarrollar Proyectos", pct:0 }
-          ]},
-        { id:7, emoji:"☕", color:"#f43f5e", title:"Backend con Java + Spring Boot", months:"Mes 14–17",
-          courses:[
-            { name:"Universidad Java - Cero a Experto - Actualizado", pct:0 },
-            { name:"Spring 6 and Spring Boot 3: Developing Java Web Applications", pct:0 }
-          ]},
-        { id:8, emoji:"🐍", color:"#fb923c", title:"Backend con Python + FastAPI", months:"Mes 17–18",
-          courses:[
-            { name:"Universidad Python - Cero a Experto - Actualizado", pct:0 },
-            { name:"Desarrolla de forma rápida APIs con FastAPI", pct:0 }
-          ]},
-        { id:9, emoji:"🚀", color:"#facc15", title:"Integración Full Stack + Portafolio", months:"Mes 18–20",
-          courses:[
-            { name:"Todo sobre Testing y Debugging de Software Desde 0 a Experto", pct:0 },
-            { name:"React, Flask, Python, MySql y ChatGPT IA - App Full Stack", pct:0 }
-          ]}
-      ]
-    },
-    {
-      id: "java",
-      label: "Java Developer",
-      icon: "☕",
-      color: "#f43f5e",
-      duration: "13–14 meses",
-      status: "upcoming",
-      lastSync: null,
-      phases: [
-        { id:1, emoji:"🧱", color:"#f43f5e", title:"Java Core — El Lenguaje a Fondo", months:"Mes 1–3",
-          courses:[
-            { name:"Universidad Java - Cero a Experto - Actualizado", pct:0 },
-            { name:"Curso completo de Java 2026 - De cero a Master", pct:0 }
-          ]},
-        { id:2, emoji:"🔷", color:"#fb923c", title:"POO Avanzada + Patrones de Diseño", months:"Mes 3–5",
-          courses:[
-            { name:"Java 25: Curso Profesional de Java 2026 – De Cero a Master", pct:0 },
-            { name:"Programador Java en 37 Días Con prácticas", pct:0 }
-          ]},
-        { id:3, emoji:"🗄️", color:"#4ade80", title:"Bases de Datos con Java — JDBC + JPA + Hibernate", months:"Mes 5–6",
-          courses:[
-            { name:"Universidad Java - Cero a Experto - Actualizado", pct:0 },
-            { name:"Entity Framework desde cero con una aplicación", pct:0 }
-          ]},
-        { id:4, emoji:"🌱", color:"#38bdf8", title:"Spring Boot — El Framework Empresarial", months:"Mes 6–9",
-          courses:[
-            { name:"Spring 6 and Spring Boot 3: Developing Java Web Applications", pct:0 }
-          ]},
-        { id:5, emoji:"🔒", color:"#e879f9", title:"Spring Security — Autenticación y Autorización", months:"Mes 9–10",
-          courses:[
-            { name:"Spring 6 and Spring Boot 3: Developing Java Web Applications", pct:0 }
-          ]},
-        { id:6, emoji:"🧪", color:"#facc15", title:"Testing Profesional en Java", months:"Mes 10–11",
-          courses:[
-            { name:"Todo sobre Testing y Debugging de Software Desde 0 a Experto", pct:0 }
-          ]},
-        { id:7, emoji:"🏗️", color:"#a78bfa", title:"Arquitectura Avanzada + Full Stack con Spring", months:"Mes 11–13",
-          courses:[
-            { name:"React, Spring y ChatGPT IA: Crea tu primera App Full Stack", pct:0 }
-          ]}
-      ]
-    },
-    {
-      id: "data",
-      label: "Analista de Datos",
-      icon: "📊",
-      color: "#a78bfa",
-      duration: "12–14 meses",
-      status: "upcoming",
-      lastSync: null,
-      phases: [
-        { id:1, emoji:"🗄️", color:"#4ade80", title:"SQL — El Corazón del Análisis de Datos", months:"Mes 1–3",
-          courses:[
-            { name:"Curso Completo de Bases de Datos. Aprende SQL y MySQL", pct:0 },
-            { name:"SQL - Curso completo de Bases de Datos - de 0 a...", pct:0 },
-            { name:"Aprende SQL desde CERO hasta AVANZADO con MySQL", pct:0 },
-            { name:"Entrenamiento de Base de Datos Microsoft SQL Server", pct:0 }
-          ]},
-        { id:2, emoji:"🐍", color:"#facc15", title:"Python para Datos — Pandas + Visualización", months:"Mes 3–5",
-          courses:[
-            { name:"Universidad Python - Cero a Experto - Actualizado", pct:0 },
-            { name:"Curso Python: Manejo de Datos con Pandas", pct:0 },
-            { name:"Análisis de Datos y Gráficos con Python", pct:0 }
-          ]},
-        { id:3, emoji:"📊", color:"#38bdf8", title:"Power BI — Visualización Ejecutiva", months:"Mes 5–7",
-          courses:[
-            { name:"Curso Power BI: De Principiante a Avanzado", pct:0 },
-            { name:"Power BI - Mi primer proyecto - Fitness Life", pct:0 },
-            { name:"Especialización en lenguaje DAX para análisis", pct:0 }
-          ]},
-        { id:4, emoji:"📗", color:"#fb923c", title:"Excel Avanzado para Análisis", months:"Mes 7–8",
-          courses:[
-            { name:"Microsoft Excel: De Principiante a Avanzado", pct:0 },
-            { name:"Universidad Excel - Básico, Intermedio y Avanzado", pct:0 }
-          ]},
-        { id:5, emoji:"🏢", color:"#f43f5e", title:"SQL Server + Oracle — Entornos Enterprise", months:"Mes 8–10",
-          courses:[
-            { name:"Entrenamiento de Base de Datos Microsoft SQL Server", pct:0 },
-            { name:"Curso completo de Oracle SQL. Todo lo que necesitas", pct:0 }
-          ]},
-        { id:6, emoji:"📈", color:"#e879f9", title:"Estadística + Machine Learning Básico", months:"Mes 10–12",
-          courses:[
-            { name:"Ciencia de datos y Machine Learning con Python", pct:0 },
-            { name:"Análisis de datos con R Programming y Python", pct:0 }
-          ]},
-        { id:7, emoji:"🎨", color:"#a78bfa", title:"Tableau + Storytelling con Datos + Portafolio", months:"Mes 12–14",
-          courses:[
-            { name:"Curso Tableau - Desde cero para principiantes", pct:0 },
-            { name:"Experto en Análisis y Visualización de Datos", pct:0 }
-          ]}
-      ]
-    }
-  ],
-
-  projects: [
-    {
-      id:1, icon:"🔌",
-      title:"Udemy Progress Tracker",
-      description:"Extensión de Chrome que sincroniza automáticamente el progreso de cursos de Udemy usando la API interna del sitio. Incluye web tracker con 5 roadmaps visuales.",
-      tech:["Chrome Extension","JavaScript","HTML","CSS"],
-      status:"in-progress",
-      github:"https://github.com/Kevin30042001/udemy-progress-tracker",
-      demo:""
-    },
-    {
-      id:2, icon:"🗺️",
-      title:"Frontend Engineer Roadmap",
-      description:"Portafolio público con tracker de 5 roadmaps de aprendizaje. Desplegado en Vercel, actualizado automáticamente desde GitHub.",
-      tech:["HTML","CSS","JavaScript","Vercel"],
-      status:"in-progress",
-      github:"https://github.com/Kevin30042001/frontend-roadmap",
-      demo:"https://frontend-roadmap-jade.vercel.app"
-    }
-  ],
-
-  skills: [
-    { name:"HTML / CSS",       level:40, color:"#f97316" },
-    { name:"JavaScript",       level:15, color:"#facc15" },
-    { name:"TypeScript",       level:5,  color:"#38bdf8" },
-    { name:"React",            level:10, color:"#61dafb" },
-    { name:"Angular",          level:5,  color:"#e879f9" },
-    { name:"Java / Android",   level:60, color:"#f43f5e" },
-    { name:"SQL / SQL Server", level:65, color:"#4ade80" },
-    { name:"Firebase",         level:50, color:"#fb923c" },
-    { name:"Git / GitHub",     level:45, color:"#a78bfa" },
-    { name:"Linux / RHEL",     level:40, color:"#94a3b8" }
-  ]
-};
-
-// ── Cursor ───────────────────────────────────────────────────────
-var cursor = document.getElementById('cursor');
-var cursorRing = document.getElementById('cursorRing');
-document.addEventListener('mousemove', function(e) {
-  cursor.style.left = e.clientX+'px'; cursor.style.top = e.clientY+'px';
-  cursorRing.style.left = e.clientX+'px'; cursorRing.style.top = e.clientY+'px';
-});
-document.addEventListener('mousedown', function(){ cursor.style.transform='translate(-50%,-50%) scale(1.8)'; });
-document.addEventListener('mouseup',   function(){ cursor.style.transform='translate(-50%,-50%) scale(1)'; });
-
-// ── Helpers ───────────────────────────────────────────────────────
-function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function pctColor(pct,base){ return pct===100?'#4ade80':pct>0?base:'#38384e'; }
-function calcMaster(phases){
-  var sum=0,count=0;
-  phases.forEach(function(p){
-    var v=p.courses.filter(function(c){return c.pct!=null;});
-    if(v.length){sum+=Math.round(v.reduce(function(a,c){return a+c.pct;},0)/v.length);count++;}
-  });
-  return count?Math.round(sum/count):0;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kevin Chávez — Software Engineer en formación. 5 roadmaps de carrera, proyectos y contacto.">
+<meta property="og:title" content="Kevin Chávez — Software Engineer">
+<meta property="og:description" content="Frontend · Backend · Full Stack · Java · Análisis de Datos. Roadmaps de 14–20 meses cada uno.">
+<title>Kevin Chávez — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500;700&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060609;--s1:#0d0d12;--s2:#131319;--s3:#1a1a22;
+  --border:#1f1f2e;--bord2:#2a2a3a;
+  --text:#eaeaf2;--muted:#50506a;--muted2:#38384e;
+  --orange:#f97316;--green:#4ade80;--yellow:#facc15;
+  --blue:#38bdf8;--purple:#a78bfa;--pink:#f472b6;--red:#f43f5e;
 }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Geist',sans-serif;overflow-x:hidden;cursor:none;}
+.cursor{position:fixed;width:8px;height:8px;background:var(--orange);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s;box-shadow:0 0 12px var(--orange);}
+.cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(249,115,22,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .12s ease;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(249,115,22,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.02) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
+.blob1{position:fixed;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(249,115,22,.05) 0%,transparent 70%);pointer-events:none;}
+.blob2{position:fixed;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(167,139,250,.04) 0%,transparent 70%);pointer-events:none;}
 
-// ── Hero ──────────────────────────────────────────────────────────
-function renderHero(){
-  document.getElementById('heroBio').textContent = DATA.profile.bio;
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(6,6,9,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Geist Mono',monospace;font-size:.8rem;font-weight:700;color:var(--orange);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-family:'Geist Mono',monospace;font-size:.7rem;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-avail{display:flex;align-items:center;gap:7px;font-family:'Geist Mono',monospace;font-size:.68rem;color:var(--green);background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:100px;padding:6px 14px;}
+.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-  // Stats: total roadmaps, cursos totales, completados, proyectos
-  var totalCourses=0, totalDone=0;
-  DATA.roadmaps.forEach(function(r){
-    r.phases.forEach(function(p){
-      totalCourses+=p.courses.length;
-      totalDone+=p.courses.filter(function(c){return c.pct===100;}).length;
-    });
-  });
-  var projs = DATA.projects.filter(function(p){return p.status==='completed';}).length;
-  var activeRoadmaps = DATA.roadmaps.filter(function(r){return r.status==='active';}).length;
+/* Layout */
+.section{padding:120px 40px 80px;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'Geist Mono',monospace;font-size:.65rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.section-label::after{content:'';flex:1;max-width:60px;height:1px;background:var(--border);}
+.section-title{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:400;letter-spacing:-.02em;margin-bottom:36px;line-height:1.1;}
+.section-title em{font-style:italic;color:var(--orange);}
 
-  document.getElementById('heroStats').innerHTML =
-    stat(DATA.roadmaps.length,'Roadmaps de carrera') +
-    stat(activeRoadmaps,'Activos ahora') +
-    stat(totalCourses,'Cursos en total') +
-    stat(totalDone,'Completados');
+/* Hero */
+#hero{display:flex;flex-direction:column;justify-content:center;padding-top:160px;min-height:100vh;}
+.hero-eyebrow{font-family:'Geist Mono',monospace;font-size:.7rem;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:20px;animation:fadeUp .6s ease both;}
+.hero-name{font-family:'Instrument Serif',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:400;line-height:.95;letter-spacing:-.02em;margin-bottom:24px;animation:fadeUp .6s ease .1s both;}
+.hero-name .line2{font-style:italic;color:var(--orange);}
+.hero-bio{font-size:.98rem;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:40px;font-weight:300;animation:fadeUp .6s ease .2s both;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .6s ease .3s both;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;padding:13px 26px;border-radius:10px;transition:opacity .2s,transform .15s;}
+.btn-primary:hover{opacity:.85;transform:translateY(-2px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--border);color:var(--text);text-decoration:none;font-size:.88rem;font-weight:500;padding:13px 26px;border-radius:10px;transition:border-color .2s,transform .15s;}
+.btn-ghost:hover{border-color:var(--bord2);transform:translateY(-2px);}
+.hero-stats{display:flex;gap:40px;margin-top:60px;padding-top:40px;border-top:1px solid var(--border);animation:fadeUp .6s ease .4s both;flex-wrap:wrap;}
+.hero-stat-num{font-family:'Geist Mono',monospace;font-weight:700;font-size:2rem;letter-spacing:-.03em;color:var(--orange);line-height:1;margin-bottom:4px;}
+.hero-stat-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* Skills */
+#skills{padding-top:100px;}
+.skills-grid{display:flex;flex-direction:column;gap:14px;max-width:700px;}
+.skill-row{display:grid;grid-template-columns:160px 1fr 48px;gap:16px;align-items:center;}
+.skill-name{font-family:'Geist Mono',monospace;font-size:.78rem;color:var(--text);font-weight:500;}
+.skill-bar-bg{height:5px;background:var(--s3);border-radius:100px;overflow:hidden;}
+.skill-bar-fill{height:100%;border-radius:100px;transition:width 1.2s cubic-bezier(.4,0,.2,1);}
+.skill-pct{font-family:'Geist Mono',monospace;font-size:.7rem;color:var(--muted);text-align:right;}
+
+/* Roadmap */
+#roadmap{padding-top:100px;}
+
+/* Roadmap tabs */
+.rm-tabs-wrap{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--border);}
+.rm-tab{background:var(--s1);border:1px solid var(--border);color:var(--muted);font-family:'Geist Mono',monospace;font-size:.72rem;padding:8px 16px;border-radius:10px;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:6px;font-weight:500;}
+.rm-tab:hover{border-color:var(--bord2);color:var(--text);}
+.rm-tab-active{color:var(--orange);}
+
+/* Roadmap header */
+.roadmap-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:14px;}
+.roadmap-duration{font-family:'Geist Mono',monospace;font-size:.75rem;color:var(--muted);}
+.master-progress{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:16px 22px;min-width:180px;text-align:center;}
+.master-pct-big{font-family:'Geist Mono',monospace;font-weight:700;font-size:2.2rem;letter-spacing:-.03em;line-height:1;display:block;margin-bottom:3px;}
+.master-sub{font-family:'Geist Mono',monospace;font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
+.master-bar-bg{width:100%;height:3px;background:var(--s3);border-radius:100px;overflow:hidden;margin-top:10px;}
+.master-bar-fill{height:100%;border-radius:100px;transition:width 1s ease;}
+
+/* Roadmap banner */
+.roadmap-banner{border:1px solid;border-radius:10px;padding:10px 16px;margin-bottom:20px;font-family:'Geist Mono',monospace;font-size:.7rem;letter-spacing:.06em;display:none;}
+
+/* Phase cards */
+.phases-list{display:flex;flex-direction:column;gap:10px;}
+.phase-card{background:var(--s1);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s;}
+.phase-card:hover{border-color:var(--bord2);}
+.phase-card-header{display:grid;grid-template-columns:40px 1fr auto;gap:14px;align-items:center;padding:16px 20px;}
+.phase-num-badge{font-family:'Geist Mono',monospace;font-weight:700;font-size:.62rem;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.phase-name{font-weight:700;font-size:.9rem;margin-bottom:3px;}
+.phase-meta-text{font-family:'Geist Mono',monospace;font-size:.62rem;color:var(--muted);}
+.phase-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;}
+.phase-pct-label{font-family:'Geist Mono',monospace;font-weight:700;font-size:1.15rem;letter-spacing:-.02em;line-height:1;}
+.phase-status-badge{font-family:'Geist Mono',monospace;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:20px;}
+.phase-bar{height:3px;background:var(--s3);}
+.phase-bar-inner{height:100%;transition:width .8s cubic-bezier(.4,0,.2,1);}
+.phase-courses{padding:14px 20px 16px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:8px;}
+.course-item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;}
+.course-item-name{font-size:.82rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.done-text{text-decoration:line-through;opacity:.5;}
+.course-item-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.course-mini-bar{width:80px;height:3px;background:var(--s3);border-radius:100px;overflow:hidden;}
+.course-mini-fill{height:100%;border-radius:100px;transition:width .8s ease;}
+.course-pct-label{font-family:'Geist Mono',monospace;font-size:.68rem;font-weight:700;min-width:32px;text-align:right;}
+
+/* Projects */
+#projects{padding-top:100px;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.project-card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .15s,box-shadow .2s;}
+.project-card:hover{border-color:var(--bord2);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.4);}
+.project-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.project-status{font-family:'Geist Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;}
+.status-completed{background:rgba(74,222,128,.1);color:#4ade80;}
+.status-in-progress{background:rgba(250,204,21,.1);color:#facc15;}
+.status-pending{background:rgba(80,80,106,.15);color:var(--muted);}
+.project-title{font-weight:700;font-size:1rem;letter-spacing:-.01em;}
+.project-desc{font-size:.82rem;color:var(--muted);line-height:1.65;flex:1;}
+.project-tech{display:flex;gap:6px;flex-wrap:wrap;}
+.tech-tag{font-family:'Geist Mono',monospace;font-size:.62rem;background:var(--s3);color:var(--muted);padding:3px 8px;border-radius:6px;border:1px solid var(--border);}
+.project-links{display:flex;gap:10px;}
+.project-link{display:inline-flex;align-items:center;gap:5px;font-family:'Geist Mono',monospace;font-size:.68rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:8px;transition:all .15s;}
+.project-link:hover{color:var(--text);border-color:var(--bord2);}
+
+/* Contact */
+#contact{padding-top:100px;min-height:60vh;display:flex;flex-direction:column;justify-content:center;}
+.contact-title{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:400;letter-spacing:-.02em;line-height:1.05;margin-bottom:20px;}
+.contact-title em{font-style:italic;color:var(--orange);}
+.contact-sub{font-size:.95rem;color:var(--muted);max-width:480px;line-height:1.7;margin-bottom:40px;font-weight:300;}
+.contact-links{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:28px 40px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-text{font-family:'Geist Mono',monospace;font-size:.62rem;color:var(--muted);}
+
+/* Responsive */
+@media(max-width:700px){
+  nav{padding:14px 20px;}
+  .nav-links{display:none;}
+  .section{padding:100px 20px 60px;}
+  footer{padding:20px;}
+  .skill-row{grid-template-columns:110px 1fr 36px;}
+  .phase-card-header{grid-template-columns:34px 1fr;}
+  .phase-right{display:none;}
+  .rm-tabs-wrap{gap:6px;}
+  .rm-tab{font-size:.65rem;padding:7px 12px;}
 }
-function stat(n,l){ return '<div class="hero-stat"><div class="hero-stat-num">'+n+'</div><div class="hero-stat-label">'+esc(l)+'</div></div>'; }
+</style>
+</head>
+<body>
 
-// ── Skills ────────────────────────────────────────────────────────
-function renderSkills(){
-  document.getElementById('skillsGrid').innerHTML = DATA.skills.map(function(s){
-    return '<div class="skill-row">'
-      +'<span class="skill-name">'+esc(s.name)+'</span>'
-      +'<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:'+s.level+'%;background:'+s.color+'"></div></div>'
-      +'<span class="skill-pct">'+s.level+'%</span>'
-      +'</div>';
-  }).join('');
-}
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="blob1"></div>
+<div class="blob2"></div>
 
-// ── Roadmap tabs ──────────────────────────────────────────────────
-var activeTab = 'frontend';
+<nav>
+  <div class="nav-logo">KC.dev</div>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#roadmap">Roadmaps</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <div class="nav-avail" id="availBadge">
+    <div class="avail-dot"></div>
+    Disponible
+  </div>
+</nav>
 
-function renderRoadmapTabs(){
-  var tabsEl = document.getElementById('roadmapTabs');
-  tabsEl.innerHTML = DATA.roadmaps.map(function(r){
-    var isActive = r.id === activeTab;
-    var statusDot = r.status==='active'
-      ? '<span style="width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 5px #4ade80;display:inline-block;margin-right:6px"></span>'
-      : '';
-    return '<button class="rm-tab'+(isActive?' rm-tab-active':'')+'" data-id="'+r.id+'" style="'+(isActive?'border-color:'+r.color+';color:'+r.color:'')+'">'+statusDot+r.icon+' '+esc(r.label)+'</button>';
-  }).join('');
+<div class="section" id="hero">
+  <div class="hero-eyebrow">// software engineer en formación · el salvador</div>
+  <h1 class="hero-name">Kevin<br><span class="line2">Chávez</span></h1>
+  <p class="hero-bio" id="heroBio"></p>
+  <div class="hero-ctas">
+    <a href="#roadmap" class="btn-primary">Ver mis Roadmaps →</a>
+    <a href="#contact" class="btn-ghost">Contactar</a>
+  </div>
+  <div class="hero-stats" id="heroStats"></div>
+</div>
 
-  tabsEl.querySelectorAll('.rm-tab').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      activeTab = btn.dataset.id;
-      renderRoadmapTabs();
-      renderActiveRoadmap();
-    });
-  });
-}
+<div class="section" id="skills">
+  <div class="section-label">// habilidades actuales</div>
+  <h2 class="section-title">Lo que sé<br><em>hacer hoy</em></h2>
+  <div class="skills-grid" id="skillsGrid"></div>
+</div>
 
-function renderActiveRoadmap(){
-  var roadmap = DATA.roadmaps.find(function(r){return r.id===activeTab;});
-  if(!roadmap) return;
-  var master = calcMaster(roadmap.phases);
-  var c = roadmap.color;
+<div class="section" id="roadmap">
+  <div class="section-label">// aprendizaje estructurado</div>
+  <h2 class="section-title">5 Roadmaps<br><em>de carrera</em></h2>
 
-  document.getElementById('masterPct').textContent  = master+'%';
-  document.getElementById('masterPct').style.color  = c;
-  document.getElementById('masterFill').style.width = master+'%';
-  document.getElementById('masterFill').style.background = c;
-  document.getElementById('roadmapDuration').textContent = roadmap.icon+' '+roadmap.label+' · '+roadmap.duration;
-  document.getElementById('footerSync').textContent = roadmap.lastSync ? 'Último sync: '+roadmap.lastSync : 'Pendiente de inicio';
+  <!-- Tabs -->
+  <div class="rm-tabs-wrap" id="roadmapTabs"></div>
 
-  // Status banner
-  var bannerEl = document.getElementById('roadmapBanner');
-  if(roadmap.status === 'active'){
-    bannerEl.style.display='flex';
-    bannerEl.style.borderColor='rgba(74,222,128,.25)';
-    bannerEl.style.background='rgba(74,222,128,.06)';
-    bannerEl.style.color='#4ade80';
-    bannerEl.textContent='● Roadmap activo — en progreso actualmente';
-  } else {
-    bannerEl.style.display='flex';
-    bannerEl.style.borderColor='rgba(80,80,106,.2)';
-    bannerEl.style.background='rgba(80,80,106,.06)';
-    bannerEl.style.color='#50506a';
-    bannerEl.textContent='○ Próximo roadmap — comenzará al completar el anterior';
-  }
+  <!-- Active roadmap -->
+  <div class="roadmap-header">
+    <div class="roadmap-duration" id="roadmapDuration"></div>
+    <div class="master-progress">
+      <span class="master-pct-big" id="masterPct">0%</span>
+      <span class="master-sub">progreso</span>
+      <div class="master-bar-bg"><div class="master-bar-fill" id="masterFill" style="width:0%"></div></div>
+    </div>
+  </div>
 
-  document.getElementById('phasesList').innerHTML = roadmap.phases.map(function(phase){
-    var synced = phase.courses.filter(function(c){return c.pct!=null;});
-    var phasePct = synced.length ? Math.round(synced.reduce(function(a,c){return a+c.pct;},0)/synced.length) : 0;
-    var isDone  = phasePct===100;
-    var inProg  = phasePct>0&&!isDone;
-    var pc      = phase.color;
+  <div class="roadmap-banner" id="roadmapBanner"></div>
+  <div class="phases-list" id="phasesList"></div>
+</div>
 
-    var badgeStyle = isDone ? 'background:'+pc+'22;color:'+pc
-                   : inProg ? 'background:rgba(250,204,21,.1);color:#facc15'
-                   : 'background:#1a1a22;color:#50506a';
-    var badgeText = isDone?'✓ lista':inProg?'en curso':'pendiente';
+<div class="section" id="projects">
+  <div class="section-label">// proyectos</div>
+  <h2 class="section-title">Lo que<br><em>he construido</em></h2>
+  <div class="projects-grid" id="projectsGrid"></div>
+</div>
 
-    var coursesHTML = phase.courses.map(function(course){
-      var pct = course.pct||0;
-      var col = pctColor(pct,pc);
-      return '<div class="course-item">'
-        +'<span class="course-item-name'+(pct===100?' done-text':'')+'">'+esc(course.name)+'</span>'
-        +'<div class="course-item-right">'
-        +'<div class="course-mini-bar"><div class="course-mini-fill" style="width:'+pct+'%;background:'+col+'"></div></div>'
-        +'<span class="course-pct-label" style="color:'+col+'">'+(pct===100?'✓':pct+'%')+'</span>'
-        +'</div></div>';
-    }).join('');
+<div class="section" id="contact">
+  <div class="section-label">// contacto</div>
+  <h2 class="contact-title">¿Hablamos?<br><em>Estoy disponible.</em></h2>
+  <p class="contact-sub" id="contactSub"></p>
+  <div class="contact-links" id="contactLinks"></div>
+</div>
 
-    return '<div class="phase-card">'
-      +'<div class="phase-card-header">'
-      +'<div class="phase-num-badge" style="background:'+pc+'18;color:'+pc+'">F'+phase.id+'</div>'
-      +'<div class="phase-info"><div class="phase-name">'+phase.emoji+' '+esc(phase.title)+'</div>'
-      +'<div class="phase-meta-text">⏱ '+esc(phase.months)+'</div></div>'
-      +'<div class="phase-right"><span class="phase-pct-label" style="color:'+pc+'">'+phasePct+'%</span>'
-      +'<span class="phase-status-badge" style="'+badgeStyle+'">'+badgeText+'</span></div>'
-      +'</div>'
-      +'<div class="phase-bar"><div class="phase-bar-inner" style="width:'+phasePct+'%;background:'+pc+'"></div></div>'
-      +'<div class="phase-courses">'+coursesHTML+'</div>'
-      +'</div>';
-  }).join('');
-}
+<footer>
+  <span class="footer-text">Kevin Chávez — Software Engineer en formación · El Salvador 🇸🇻</span>
+  <span class="footer-text" id="footerSync"></span>
+</footer>
 
-// ── Projects ──────────────────────────────────────────────────────
-function renderProjects(){
-  var colors=['#f97316','#4ade80','#38bdf8','#a78bfa','#f43f5e','#facc15'];
-  document.getElementById('projectsGrid').innerHTML = DATA.projects.map(function(p,i){
-    var col=colors[i%colors.length];
-    var sClass='status-'+p.status;
-    var sLabel=p.status==='completed'?'✓ Completado':p.status==='in-progress'?'▶ En progreso':'○ Pendiente';
-    var tech=p.tech.map(function(t){return '<span class="tech-tag">'+esc(t)+'</span>';}).join('');
-    var links='';
-    if(p.github) links+='<a href="'+esc(p.github)+'" target="_blank" class="project-link">GitHub →</a>';
-    if(p.demo)   links+='<a href="'+esc(p.demo)+'"   target="_blank" class="project-link">Demo →</a>';
-    if(!links)   links='<span class="project-link" style="opacity:.4;cursor:default">Próximamente</span>';
-    return '<div class="project-card" style="border-top:2px solid '+col+'">'
-      +'<div class="project-top"><div style="font-size:1.4rem">'+(p.icon||'🛠')+'</div>'
-      +'<span class="project-status '+sClass+'">'+sLabel+'</span></div>'
-      +'<div class="project-title">'+esc(p.title)+'</div>'
-      +'<p class="project-desc">'+esc(p.description)+'</p>'
-      +'<div class="project-tech">'+tech+'</div>'
-      +'<div class="project-links">'+links+'</div>'
-      +'</div>';
-  }).join('');
-}
-
-// ── Contact ───────────────────────────────────────────────────────
-function renderContact(){
-  document.getElementById('contactSub').textContent =
-    'Estudiante de Ingeniería en Software en UTEC, El Salvador. '+
-    'Construyendo hacia múltiples especializaciones en software. '+
-    'Abierto a prácticas, proyectos y oportunidades de aprendizaje.';
-  var html='';
-  if(DATA.profile.email)    html+='<a href="mailto:'+esc(DATA.profile.email)+'" class="btn-primary">✉ '+esc(DATA.profile.email)+'</a>';
-  if(DATA.profile.github)   html+='<a href="'+esc(DATA.profile.github)+'" target="_blank" class="btn-ghost">GitHub</a>';
-  if(DATA.profile.linkedin) html+='<a href="'+esc(DATA.profile.linkedin)+'" target="_blank" class="btn-ghost">LinkedIn</a>';
-  document.getElementById('contactLinks').innerHTML = html;
-}
-
-// ── Init ──────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function(){
-  renderHero();
-  renderSkills();
-  renderRoadmapTabs();
-  renderActiveRoadmap();
-  renderProjects();
-  renderContact();
-});
+<script src="app.js"></script>
+</body>
+</html>
