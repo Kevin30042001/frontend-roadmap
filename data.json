@@ -88,7 +88,7 @@
     "description": "Extensión de Chrome que sincroniza automáticamente el progreso de cursos de Udemy usando la API interna del sitio. Incluye web tracker con roadmap visual.",
     "tech": ["Chrome Extension", "JavaScript", "HTML", "CSS"],
     "status": "in-progress",
-    "github": "",
+    "github": "https://github.com/Kevin30042001/udemy-progress-tracker"
     "demo": "",
     "phase": 1
   },
