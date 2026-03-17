@@ -82,67 +82,27 @@
     ]
   },
   "projects": [
-    {
-      "id": 1,
-      "title": "TechMaintenance",
-      "description": "App Android para gestión de mantenimiento de equipos técnicos. Autenticación biométrica, roles (admin/técnico), GPS, Firebase y modo offline con Room Database.",
-      "tech": ["Java", "Firebase", "Android", "Room DB"],
-      "status": "completed",
-      "github": "https://github.com/tu-usuario/techMaintenance",
-      "demo": "",
-      "phase": 0
-    },
-    {
-      "id": 2,
-      "title": "CallTrack HelpDesk",
-      "description": "Sistema de tickets de soporte técnico. Arquitectura de 3 capas, roles (Admin/Supervisor/Agente), JWT, MySQL en Railway.",
-      "tech": ["React", "Vite", "MySQL", "JWT", "Railway"],
-      "status": "completed",
-      "github": "https://github.com/tu-usuario/calltrack",
-      "demo": "",
-      "phase": 4
-    },
-    {
-      "id": 3,
-      "title": "Sabor Y Encanto",
-      "description": "Web de restaurante con diseño elegante. Menú interactivo, reservaciones y diseño gold-and-dark.",
-      "tech": ["HTML", "CSS", "JavaScript"],
-      "status": "completed",
-      "github": "https://github.com/tu-usuario/sabor-y-encanto",
-      "demo": "",
-      "phase": 1
-    },
-    {
-      "id": 4,
-      "title": "Udemy Progress Tracker",
-      "description": "Extensión de Chrome + web tracker que sincroniza automáticamente el progreso de cursos de Udemy usando la API interna del sitio.",
-      "tech": ["Chrome Extension", "JavaScript", "HTML/CSS"],
-      "status": "in-progress",
-      "github": "",
-      "demo": "",
-      "phase": 1
-    },
-    {
-      "id": 5,
-      "title": "Proyecto de cierre — Fase 1",
-      "description": "Landing page mobile-first con Grid + Flexbox, metodología BEM y animaciones CSS. Lighthouse > 90.",
-      "tech": ["HTML", "CSS", "BEM"],
-      "status": "pending",
-      "github": "",
-      "demo": "",
-      "phase": 1
-    },
-    {
-      "id": 6,
-      "title": "App de Clima — Vanilla JS + TS",
-      "description": "Aplicación de clima con JavaScript vanilla + TypeScript. Consume OpenWeatherMap API, historial en localStorage.",
-      "tech": ["JavaScript", "TypeScript", "OpenWeatherMap API"],
-      "status": "pending",
-      "github": "",
-      "demo": "",
-      "phase": 2
-    }
-  ],
+  {
+    "id": 1,
+    "title": "Udemy Progress Tracker",
+    "description": "Extensión de Chrome que sincroniza automáticamente el progreso de cursos de Udemy usando la API interna del sitio. Incluye web tracker con roadmap visual.",
+    "tech": ["Chrome Extension", "JavaScript", "HTML", "CSS"],
+    "status": "in-progress",
+    "github": "",
+    "demo": "",
+    "phase": 1
+  },
+  {
+    "id": 2,
+    "title": "Frontend Engineer Roadmap",
+    "description": "Este mismo portafolio — tracker público de mi aprendizaje hacia Frontend Engineer Senior. 14–18 meses, 7 fases, sincronizado con Udemy.",
+    "tech": ["HTML", "CSS", "JavaScript", "Vercel"],
+    "status": "in-progress",
+    "github": "https://github.com/Kevin30042001/frontend-roadmap",
+    "demo": "",
+    "phase": 1
+  }
+],
   "skills": [
     { "name": "HTML / CSS", "level": 40, "color": "#f97316" },
     { "name": "JavaScript", "level": 15, "color": "#facc15" },
