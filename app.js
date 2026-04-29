@@ -20,7 +20,7 @@ var DATA = {
       color: "#fb923c",
       duration: "14–18 meses",
       status: "active",
-      lastSync: "2026-03-17",
+      lastSync: "2026-04-29",
       phases: [
         { id:1, emoji:"🧱", color:"#4ade80", title:"HTML + CSS Moderno + Responsive", months:"Mes 1–2",
           courses:[
